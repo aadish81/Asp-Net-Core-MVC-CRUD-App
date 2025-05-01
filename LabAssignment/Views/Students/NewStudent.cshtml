@@ -1,0 +1,29 @@
+﻿@model Student;
+@{
+	ViewData["Title"] = "Add new Student";
+}
+
+<form method="post" asp-controller="Students" asp-action="NewStudent">
+	<div class="border p-3 mt-3">
+		 <div class="row pd-3">
+			 <h1>
+				 Add Student
+			 </h1>
+		 </div>
+		 <div class="row pd-3">
+			 <label asp-for="Name" class="mb-2">Name:</label>
+			 <input asp-for="Name" class="form-control" required/>
+		 </div>
+		 <div class="row pd-3">
+			 <label asp-for="Address" class="mb-2 mt-2">Address:</label>
+			 <input asp-for="Address" class="form-control" required/>
+		 </div>
+		 <div class="row pd-3">
+			 <label asp-for="Faculty" class="mb-2 mt-2">Faculty:</label>
+			 <input asp-for=Faculty class="form-control" required/>
+		 </div>
+		 <div class="row mt-3">
+			 <button class="btn btn-primary col-2" type="submit" asp-controller="Students" asp-action="NewStudent">Submit</button>
+		 </div>
+	</div>
+</form>
